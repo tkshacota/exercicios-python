@@ -1,5 +1,3 @@
-from operator import truediv
-
 import matplotlib.pyplot as plt
 
 
@@ -52,7 +50,17 @@ def gerar_grafico(lista):
     quantidade = list(contagem_de_produtos.values())
 
     plt.bar(categorias, quantidade, color="purple")
+    plt.xlabel("Categorias")
+    plt.ylabel("Quantidade")
+    plt.title("Grafico de Produtos")
+    plt.tight_layout()
     plt.show()
+
+cadastrar_produto(estoque,"Arroz 5kg", 26.90, "Alimentos", 45)
+cadastrar_produto(estoque,"Feijão Preto 1kg", 7.50, "Alimentos", 30)
+cadastrar_produto(estoque,"Detergente Líquido 500ml", 2.80, "Limpeza", 60)
+cadastrar_produto(estoque,"Sabão em Pó 1kg", 14.90, "Limpeza", 25)
+cadastrar_produto(estoque,"Suco de Laranja 1L", 8.50, "bebidas", 40)
 
 while True:
     print("\nBem-vindo ao sistema do mercadinho")
@@ -63,3 +71,26 @@ while True:
     print("5 - Sair")
 
     opcao = input("Escolha uma opcao: ")
+
+    match opcao:
+        case "1":
+            nome = input("Digite o nome do produto: ")
+            preco = float(input("Digite o preco do produto: "))
+            categoria = input("Digite o categoria do produto: ")
+            quantidade = int(input("Digite o quantidade do produto: "))
+            cadastrar_produto(estoque, nome, preco, categoria, quantidade)
+            print("Produto cadastrado com sucesso!")
+        case "2":
+            listar_produtos(estoque)
+        case "3":
+            produto_buscado = input("Digite o nome do produto: ")
+            resultado = buscar_produto(estoque, produto_buscado)
+            if resultado:
+                print(f"Produto cadastrado com sucesso: {resultado}")
+            else:
+                print("produto nao encontrado")
+        case "4":
+            gerar_grafico(estoque)
+        case "5":
+            break
+
