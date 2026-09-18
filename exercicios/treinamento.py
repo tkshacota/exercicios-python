@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 
 class produto:
+    """Classe para representação de um item de estoque."""
     def __init__(self, nome, preco, categoria, quantidade):
         self.nome = nome
         self.preco = preco
@@ -9,11 +10,13 @@ class produto:
         self.quantidade = quantidade
 
     def __str__(self):
-        return (
-            f"Nome: {self.nome}, Preco: {self.preco}, "
-            f"Categoria: {self.categoria}, Quantidade: {self.quantidade}"
-        )
-
+        return f"""
+        ------------------------------
+        Produto: {self.nome}
+        Preço: R$ {self.preco:.2f}
+        Categoria: {self.categoria}
+        Quantidade: {self.quantidade} un
+        ------------------------------"""
 
 estoque = []
 
@@ -33,6 +36,10 @@ def listar_produtos(lista):
 
 
 def buscar_produto(lista, produto_buscado):
+    """Procura um produto na lista de estoque pelo nome (case-insensitive).
+
+        Retorna o objeto 'produto' se encontrado, ou 'None' caso contrário.
+        """
     for produto in lista:
         if produto.nome.lower() == produto_buscado.lower():
             return produto
@@ -63,12 +70,18 @@ cadastrar_produto(estoque,"Sabão em Pó 1kg", 14.90, "Limpeza", 25)
 cadastrar_produto(estoque,"Suco de Laranja 1L", 8.50, "bebidas", 40)
 
 while True:
-    print("\nBem-vindo ao sistema do mercadinho")
-    print("1 - Cadastrar um produto")
-    print("2 - Listar um produtos")
-    print("3 - Buscar um produto")
-    print("4 - Gerar grafico")
-    print("5 - Sair")
+    menu = """
+    ====================================
+       BEM-VINDO AO SISTEMA DE ESTOQUE   
+    ====================================
+    1 - Cadastrar um produto
+    2 - Listar produtos
+    3 - Buscar um produto
+    4 - Gerar gráfico
+    5 - Sair
+    ====================================
+    """
+    print(menu)
 
     opcao = input("Escolha uma opcao: ")
 
