@@ -1,0 +1,46 @@
+from IPython. Display import HTML
+
+html_code ="""
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; background-color: #f8f8f8; margin: 0; padding: 0;">
+
+  <header style="text-align: center; background-color: #3498db; color: #fff; padding: 20px;">
+    <h1 style="margin: 0;">Kaua de Lima Coradi</h1>
+    <p style="margin: 5px 0;">Desenvolvedor Web</p>
+  </header>
+
+  <section style="margin: 20px; text-align: center;">
+    <img src="content/sua_foto.jpg" alt="Sua Foto" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; margin-bottom: 20px;">
+    <div id="informacoes-pessoais" style="max-width: 400px; margin: 0 auto;">
+      <p><strong>Cidade:</strong> Sao Paulo</p>
+      <p><strong>País:</strong> Brasil</p>
+      <p><strong>Interesses:</strong> Web Development, Programação, etc.</p>
+    </div>
+  </section>
+
+  <section style="margin: 20px; text-align: center;">
+    <h2>Habilidades</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>Linguagens:</strong> Python, HTML, CSS, JavaScript</li>
+      <li><strong>Ferramentas:</strong> Git, VS Code</li>
+    </ul>
+  </section>
+
+  <section style="margin: 20px; text-align: center;">
+    <h2>Projeto Recente</h2>
+    <p>Trabalhando em um site pessoal para mostrar meu portfólio.</p>
+  </section>
+
+  <footer style="text-align: center; margin: 20px 0 30px 0;">
+    <a href="www.linkedin.com/in/kauã-lima-coradi-556b72397" target="_blank" style="margin: 0 10px; color: #3498db; text-decoration: none; font-weight: bold;">LinkedIn</a>
+  </footer>
+
+</body>
+</html>
+HTML(html_code)
