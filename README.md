@@ -1,18 +1,23 @@
-# Exercícios de Python
+# Exercícios e projetos de estudo em Python
 
-Coleção de exercícios e pequenos projetos feitos em Python para estudo.
+Repositório com atividades feitas durante os estudos de TI e pequenos programas de prática. Os arquivos são exercícios acadêmicos, não projetos de experiência profissional.
 
-## Estrutura
+## Conteúdo
 
-- `exercicios/`: atividades de aula sobre médias, estoque, filmes e números primos.
-- `projetos/`: programas interativos, incluindo calculadoras e um sistema de vendas.
+- `exercicios/`: fundamentos como condições, repetições, listas, funções e pequenos desafios.
+- `projetos/`: programas de terminal, incluindo calculadoras e um sistema simples de vendas.
 
-## Como executar
+## Executar um programa
 
-Com o Python instalado, abra um terminal na pasta do repositório e execute o arquivo desejado:
+Requer Python 3.10 ou superior. Os exemplos usam a biblioteca padrão.
 
 ```bash
 python projetos/calculadora_operacoes.py
+python projetos/sistema_de_vendas.py
 ```
 
-Cada programa interativo mostra as instruções no terminal.
+Cada programa tem seu próprio fluxo de entrada pelo terminal. Leia o arquivo antes de executar e use apenas dados fictícios.
+
+## Observação
+
+O repositório preserva exercícios em diferentes estágios de estudo. Os projetos pessoais com documentação e exemplos sintéticos estão listados no [perfil](https://github.com/tkshacota).
